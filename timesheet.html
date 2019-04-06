@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- CSS  -->
+  <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
+  <link rel="stylesheet" href="./timesheet.css">
+
+</head>
+
+<body>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Employee Data Management</h1>
+      <p class="lead">A Comprehensive Directory of Employee Billable Hours</p>
+    </div>
+  </div>
+
+  <!-- card Heading for the retrieved employee data -->
+  <div class="col">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i> Current Employees</div>
+
+      <div class="card-body" id="employee-section">
+        <table style="width:100%">
+          <!-- employee info HEADER -->
+          <tr>
+            <th>Employee Name</th>
+            <th>Role</th>
+            <th>Start Date</th>
+            <th>Month Worked</th>
+            <th>Monthly Rate ($)</th>
+            <th>Total Billed ($)</th>
+          </tr>
+          <!-- EMPLOYEE INFO INPUT -->
+          <div id="employee-info"> </div>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <!-- form employee info input -->
+  <div class="col">
+    <div class="card card-default">
+      <div class="card-header">
+        Add Employee
+      </div>
+      <div class="card-body">
+        <form role="form">
+          <div class="form-group row">
+            <label for="name-input">Employee Name:</label>
+            <input class="form-control" id="name-input" type="text">
+          </div>
+          <div class="form-group row">
+            <label for="email-input">Role:</label>
+            <input class="form-control" id="role-input" type="email">
+          </div>
+          <div class="form-group row">
+            <label for="age-input">Start Date (MM/DD/YY)</label>
+            <input class="form-control" id="date-input" type="number">
+          </div>
+          <div class="form-group row">
+            <label for="comment-input">Monthly Rate</label>
+            <input class="form-control" id="rate-input"></input>
+          </div>
+          <button class="btn btn-primary" id="button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- JQuery link -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+  <!-- Firebase -->
+  <script src=“https://www.gstatic.com/firebasejs/5.9.3/firebase.js“> </script> 
+  <!-- JS link -->
+  <script src = "./app.js" ></script>
+</body>
+
+</html>
